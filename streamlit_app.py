@@ -1,3 +1,3 @@
 
 import streamlit
-streamlit.title('A Tester's Study Guide')
+streamlit.title('A Study Guide for Testers')
