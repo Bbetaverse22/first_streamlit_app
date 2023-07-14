@@ -28,7 +28,7 @@ streamlit.dataframe(fruityvice_normalized)
 import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT * from fruit_load_list")
+my_cur.execute("Insert into fruit_load_list ('from streamlit')")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit_load_list contains:")
 streamlit.dataframe(my_data_rows)
